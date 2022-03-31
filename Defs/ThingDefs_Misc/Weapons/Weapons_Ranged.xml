@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>GN_Bullet_RCRYNO</defName>
+    <label>R.Y.N.O rocket blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/RYNO</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <explosionRadius>1.5</explosionRadius>
+      <speed>51</speed>
+      <damageAmountBase>200</damageAmountBase>
+      <stoppingPower>5</stoppingPower>
+      <armorPenetrationBase>3</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>GN_RCRYNO</defName>
+    <label>R.Y.N.O rocket launcher</label>
+    <description>_</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/GN_RCRYNO</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>85000</WorkToMake>
+      <Mass>10.1</Mass>
+      <AccuracyTouch>0.35</AccuracyTouch>
+      <AccuracyShort>0.35</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>2.4</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>155</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <forcedMissRadius>1</forcedMissRadius>
+        <defaultProjectile>GN_Bullet_RCRYNO</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+        <range>40</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>9</burstShotCount>
+        <soundCast>GN_Shot_RCRYNO</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <onlyManualCast>false</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <thingSetMakerTags Inherit="False">
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags Inherit="False">
+      <li>SpacerGun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <thingCategories Inherit="False">
+      <li>GunNut</li>
+    </thingCategories>
+  </ThingDef>
+
+</Defs>
