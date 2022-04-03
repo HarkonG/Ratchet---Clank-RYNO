@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingCategoryDef>
-    <defName>AmmoRCRYNORocket</defName>
+    <defName>AmmoRYNORocket</defName>
     <label>R.Y.N.O. rocket</label>
     <parent>AmmoRockets</parent>
     <iconPath>UI/Icons/ThingCategories/CaliberCannon</iconPath>
@@ -10,15 +10,15 @@
 
   <!-- ==================== AmmoSet ========================== -->
   <CombatExtended.AmmoSetDef>
-    <defName>AmmoSet_RCRYNORocket</defName>
+    <defName>AmmoSet_RYNORocket</defName>
     <label>R.Y.N.O. rocket</label>
     <ammoTypes>
-      <Ammo_RCRYNORocket_HE>Bullet_RCRYNORocket_HE</Ammo_RCRYNORocket_HE>
+      <Ammo_RYNORocket_HE>Bullet_RYNORocket_HE</Ammo_RYNORocket_HE>
     </ammoTypes>
   </CombatExtended.AmmoSetDef>
 
   <!-- ==================== Ammo ========================== -->
-  <ThingDef Class="CombatExtended.AmmoDef" Name="RCRYNORocketBase" ParentName="AmmoBase" Abstract="True">
+  <ThingDef Class="CombatExtended.AmmoDef" Name="RYNORocketBase" ParentName="AmmoBase" Abstract="True">
     <description>Recoilless cartridge designed for use with the R.Y.N.O. rocket launcher.</description>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
@@ -28,15 +28,15 @@
       <li>CE_AutoEnableCrafting_TableMachining</li>
     </tradeTags>
     <thingCategories>
-      <li>AmmoRCRYNORocket</li>
+      <li>AmmoRYNORocket</li>
     </thingCategories>
     <stackLimit>100</stackLimit>
     <cookOffFlashScale>40</cookOffFlashScale>
     <cookOffSound>MortarBomb_Explode</cookOffSound>
   </ThingDef>
 
-  <ThingDef Class="CombatExtended.AmmoDef" ParentName="RCRYNORocketBase">
-    <defName>Ammo_RCRYNORocket_HE</defName>
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="RYNORocketBase">
+    <defName>Ammo_RYNORocket_HE</defName>
     <label>R.Y.N.O. rocket</label>
     <graphicData>
       <texPath>Things/Ammo/Cannon/HE</texPath>
@@ -48,13 +48,13 @@
       <Bulk>0.1452</Bulk>
     </statBases>
     <ammoClass>GrenadeHE</ammoClass>
-    <detonateProjectile>Bullet_RCRYNORocket_HE</detonateProjectile>
+    <detonateProjectile>Bullet_RYNORocket_HE</detonateProjectile>
   </ThingDef>
 
   <!-- ================== Projectiles ================== -->
-  <ThingDef Class="CombatExtended.AmmoDef" Name="BaseRCRYNORocket" ParentName="BaseBullet" Abstract="true">
+  <ThingDef Class="CombatExtended.AmmoDef" Name="BaseRYNORocket" ParentName="BaseBullet" Abstract="true">
     <graphicData>
-      <texPath>Things/Projectile/RYNO</texPath>
+      <texPath>Things/Projectile/HRK_RYNORocket</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
@@ -64,9 +64,9 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseRCRYNORocket">
-    <defName>Bullet_RCRYNORocket_HE</defName>
-    <label>RCRYNORocket shell (HE)</label>
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseRYNORocket">
+    <defName>Bullet_RYNORocket_HE</defName>
+    <label>RYNORocket shell (HE)</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Bomb</damageDef>
       <damageAmountBase>4.00</damageAmountBase>
@@ -86,10 +86,10 @@
 
   <!-- ==================== Recipes ========================== -->
   <RecipeDef ParentName="AmmoRecipeBase">
-    <defName>MakeAmmo_RCRYNORocket_HE</defName>
-    <label>make RCRYNORocket HE cartridge x5</label>
-    <description>Craft 5 RCRYNORocket HE cartridges.</description>
-    <jobString>Making RCRYNORocket HE cartridges.</jobString>
+    <defName>MakeAmmo_RYNORocket_HE</defName>
+    <label>make RYNORocket HE cartridge x5</label>
+    <description>Craft 5 RYNORocket HE cartridges.</description>
+    <jobString>Making RYNORocket HE cartridges.</jobString>
     <workAmount>9600</workAmount>
     <ingredients>
       <li>
@@ -125,7 +125,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <Ammo_RCRYNORocket_HE>100</Ammo_RCRYNORocket_HE>
+      <Ammo_RYNORocket_HE>100</Ammo_RYNORocket_HE>
     </products>
   </RecipeDef>
 

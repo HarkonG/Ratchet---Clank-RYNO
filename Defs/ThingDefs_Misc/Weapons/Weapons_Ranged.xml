@@ -3,10 +3,10 @@
 <Defs>
 
   <ThingDef ParentName="BaseBullet">
-    <defName>GN_Bullet_RCRYNO</defName>
+    <defName>HRK_Bullet_RYNO</defName>
     <label>R.Y.N.O rocket blast</label>
     <graphicData>
-      <texPath>Things/Projectile/RYNO</texPath>
+      <texPath>Things/Projectile/HRK_RYNORocket</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
@@ -22,12 +22,12 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>GN_RCRYNO</defName>
+    <defName>HRK_RYNO</defName>
     <label>R.Y.N.O rocket launcher</label>
     <description>_</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/Weapons/GN_RCRYNO</texPath>
+      <texPath>Things/Weapons/HRK_RYNO</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.0</drawSize>
     </graphicData>
@@ -59,13 +59,13 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <forcedMissRadius>1</forcedMissRadius>
-        <defaultProjectile>GN_Bullet_RCRYNO</defaultProjectile>
+        <defaultProjectile>HRK_Bullet_RYNO</defaultProjectile>
         <warmupTime>3.5</warmupTime>
         <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
         <range>40</range>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
         <burstShotCount>9</burstShotCount>
-        <soundCast>GN_Shot_RCRYNO</soundCast>
+        <soundCast>HRK_Shot_RYNO</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <onlyManualCast>false</onlyManualCast>
         <targetParams>
@@ -83,17 +83,11 @@
         <power>11.7</power>
         <cooldownTime>2.6</cooldownTime>
       </li>
-    </tools>
-    <thingSetMakerTags Inherit="False">
-      <li>RewardStandardQualitySuper</li>
-    </thingSetMakerTags>
+    </tools>    
     <weaponTags Inherit="False">
       <li>SpacerGun</li>
       <li>GunHeavy</li>
-    </weaponTags>
-    <thingCategories Inherit="False">
-      <li>GunNut</li>
-    </thingCategories>
+    </weaponTags>    
   </ThingDef>
 
 </Defs>

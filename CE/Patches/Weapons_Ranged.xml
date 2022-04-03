@@ -12,7 +12,7 @@
                 <!--===== TOOLS FOR THE TOOL GOD =====-->
                 <li Class="PatchOperationReplace">
                     <xpath>
-						/Defs/ThingDef[defName = "GN_RCRYNO"]/tools
+						/Defs/ThingDef[defName = "HRK_RYNO"]/tools
                     </xpath>
                     <value>
                         <tools>
@@ -41,9 +41,9 @@
                     </value>
                 </li>
 
-                <!--===== GN_RCRYNO ===== -->
+                <!--===== HRK_RYNO ===== -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_RCRYNO</defName>
+                    <defName>HRK_RYNO</defName>
                     <statBases>
                         <Mass>10</Mass>
                         <Bulk>15.30</Bulk>
@@ -62,14 +62,14 @@
                         <recoilAmount>3.0</recoilAmount>
                         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                         <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_RCRYNORocket_HE</defaultProjectile>
+                        <defaultProjectile>Bullet_RYNORocket_HE</defaultProjectile>
                         <warmupTime>2</warmupTime>
                         <range>55</range>
                         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
                         <burstShotCount>9</burstShotCount>
                         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
                         <minRange>5</minRange>
-                        <soundCast>GN_Shot_RCRYNO</soundCast>
+                        <soundCast>HRK_Shot_RYNO</soundCast>
                         <soundCastTail>GunTail_Heavy</soundCastTail>
                         <muzzleFlashScale>14</muzzleFlashScale>
                         <targetParams>
@@ -79,7 +79,7 @@
                     <AmmoUser>
                         <magazineSize>50</magazineSize>
                         <reloadTime>8.5</reloadTime>
-                        <ammoSet>AmmoSet_RCRYNORocket</ammoSet>
+                        <ammoSet>AmmoSet_RYNORocket</ammoSet>
                     </AmmoUser>
                     <FireModes>
                         <aimedBurstShotCount>4</aimedBurstShotCount>
