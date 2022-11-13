@@ -1,94 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
 
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Combat Extended</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <operations>
-
-                <!--===== TOOLS FOR THE TOOL GOD =====-->
-                <li Class="PatchOperationReplace">
-                    <xpath>
+            <!--===== TOOLS FOR THE TOOL GOD =====-->
+            <li Class="PatchOperationReplace">
+                <xpath>
 						/Defs/ThingDef[defName = "HRK_RYNO"]/tools
-                    </xpath>
-                    <value>
-                        <tools>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>stock</label>
-                                <capacities>
-                                    <li>Blunt</li>
-                                </capacities>
-                                <power>8</power>
-                                <cooldownTime>1.55</cooldownTime>
-                                <chanceFactor>1.5</chanceFactor>
-                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
-                            </li>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>barrel</label>
-                                <capacities>
-                                    <li>Blunt</li>
-                                </capacities>
-                                <power>5</power>
-                                <cooldownTime>2.02</cooldownTime>
-                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
-                            </li>
-                        </tools>
-                    </value>
-                </li>
+                </xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <chanceFactor>1.5</chanceFactor>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>barrel</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>5</power>
+                            <cooldownTime>2.02</cooldownTime>
+                            <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
 
-                <!--===== HRK_RYNO ===== -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_RYNO</defName>
-                    <statBases>
-                        <Mass>10</Mass>
-                        <Bulk>15.30</Bulk>
-                        <SwayFactor>2.58</SwayFactor>
-                        <ShotSpread>0.10</ShotSpread>
-                        <SightsEfficiency>0.7</SightsEfficiency>
-                        <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
-                    </statBases>
-                    <costList>
-                        <Steel>95</Steel>
-                        <Plasteel>60</Plasteel>
-                        <Chemfuel>35</Chemfuel>
-                        <ComponentIndustrial>18</ComponentIndustrial>
-                    </costList>
-                    <Properties>
-                        <recoilAmount>3.0</recoilAmount>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_RYNORocket_HE</defaultProjectile>
-                        <warmupTime>2</warmupTime>
-                        <range>55</range>
-                        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-                        <burstShotCount>9</burstShotCount>
-                        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-                        <minRange>5</minRange>
-                        <soundCast>HRK_Shot_RYNO</soundCast>
-                        <soundCastTail>GunTail_Heavy</soundCastTail>
-                        <muzzleFlashScale>14</muzzleFlashScale>
-                        <targetParams>
-                            <canTargetLocations>true</canTargetLocations>
-                        </targetParams>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>50</magazineSize>
-                        <reloadTime>8.5</reloadTime>
-                        <ammoSet>AmmoSet_RYNORocket</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aimedBurstShotCount>4</aimedBurstShotCount>
-                        <aiUseBurstMode>false</aiUseBurstMode>
-                        <aiAimMode>AimedShot</aiAimMode>
-                    </FireModes>
-                </li>
+            <!--===== HRK_RYNO ===== -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_RYNO</defName>
+                <statBases>
+                    <Mass>10</Mass>
+                    <Bulk>15.30</Bulk>
+                    <SwayFactor>2.58</SwayFactor>
+                    <ShotSpread>0.10</ShotSpread>
+                    <SightsEfficiency>0.7</SightsEfficiency>
+                    <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+                </statBases>
+                <costList>
+                    <Steel>95</Steel>
+                    <Plasteel>60</Plasteel>
+                    <Chemfuel>35</Chemfuel>
+                    <ComponentIndustrial>18</ComponentIndustrial>
+                </costList>
+                <Properties>
+                    <recoilAmount>3.0</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>True</hasStandardCommand>
+                    <defaultProjectile>Bullet_RYNORocket_HE</defaultProjectile>
+                    <warmupTime>2</warmupTime>
+                    <range>55</range>
+                    <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                    <burstShotCount>9</burstShotCount>
+                    <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                    <minRange>5</minRange>
+                    <soundCast>HRK_Shot_RYNO</soundCast>
+                    <soundCastTail>GunTail_Heavy</soundCastTail>
+                    <muzzleFlashScale>14</muzzleFlashScale>
+                    <targetParams>
+                        <canTargetLocations>true</canTargetLocations>
+                    </targetParams>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>50</magazineSize>
+                    <reloadTime>8.5</reloadTime>
+                    <ammoSet>AmmoSet_RYNORocket</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aimedBurstShotCount>4</aimedBurstShotCount>
+                    <aiUseBurstMode>false</aiUseBurstMode>
+                    <aiAimMode>AimedShot</aiAimMode>
+                </FireModes>
+            </li>
 
-            </operations>
-        </match>
+        </operations>
     </Operation>
 </Patch>
